@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import {Canvas} from "@react-three/fiber"
 import './App.css';
+import Box from "./Box";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<Canvas camera={{position :[0,0,5]}}>
+<Box className="red" position={[-4,0,0]}/>
+<Box className="red" position={[0,0,0]} rotat={[Math.PI/ 4, Math.PI/ 4,0]}/>
+<Box className="red" position={[-4,0,0]}/>
+<Box className="red" position={[0,0,0]}/>
+</Canvas>
+  
     </div>
   );
 }
